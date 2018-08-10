@@ -1581,6 +1581,8 @@ declare module "lodash/fp" {
     trailing?: boolean
   };
 
+  declare type Debounced<F> = F & {cancel: () => void, flush: () => void};
+
   declare type NestedArray<T> = Array<Array<T>>;
 
   declare type matchesIterateeShorthand = Object;

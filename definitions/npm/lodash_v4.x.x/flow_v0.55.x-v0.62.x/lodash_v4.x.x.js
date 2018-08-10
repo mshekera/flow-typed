@@ -1612,6 +1612,8 @@ declare module "lodash/fp" {
     | ((item: T) => U)
     | propertyIterateeShorthand;
 
+  declare type Debounced<F> = F & {cancel: () => void, flush: () => void};
+
   declare class Lodash {
     // Array
     chunk<T>(size: number): (array: Array<T>) => Array<Array<T>>;
